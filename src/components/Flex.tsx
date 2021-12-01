@@ -16,8 +16,6 @@ const StyledFlex = styled.div<FlexProps>`
   margin: ${props => props.margin || '0'};
 `;
 
-const Flex: FC<FlexProps> = props => {
-    return <StyledFlex {...props}/>
-};
+const Flex: FC<FlexProps> = props => <StyledFlex {...props}/>
 
 export default Flex;
