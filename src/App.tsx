@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {Title} from "./components/Title";
+import Title from "./components/Title";
+import Flex from "./components/Flex";
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -11,8 +12,8 @@ const AppWrapper = styled.div`
 
 export const App = () => {
     return <AppWrapper>
-        <Title color='green'>
-            App
-        </Title>
+        <Flex justify='center'>
+            <Title color='green'>Console with styled components</Title>
+        </Flex>
     </AppWrapper>
 };

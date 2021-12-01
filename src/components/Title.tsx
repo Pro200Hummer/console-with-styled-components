@@ -1,12 +1,14 @@
 import React, {FC} from 'react';
 import styled from "styled-components";
 
-interface Title {
+interface TitleProps {
     color: string
 }
 
-const StyledTitle = styled.h1`
+const StyledTitle = styled.h1<TitleProps>`
   color: ${props => props.color};
 `;
 
-export const Title: FC<Title> = props => <StyledTitle {...props}/>
+const Title: FC<TitleProps> = props => <StyledTitle {...props}/>
+
+export default Title
