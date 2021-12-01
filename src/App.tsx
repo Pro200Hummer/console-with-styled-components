@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {KeyboardEvent, useState} from 'react';
 import styled from "styled-components";
 import Title from "./components/Title";
 import Flex from "./components/Flex";
@@ -13,13 +13,23 @@ const AppWrapper = styled.div`
 `;
 
 export const App = () => {
+    const [lines, setLines] = useState<string[]>(['C/users/user>']);
+
+    const onKeyPressHandler = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+        if(e.key === "Enter"){
+            setLines([...lines, 'C/users/user>'])
+        }
+    }
+
     return <AppWrapper>
         <Flex justify='center'>
-            <Title color='green'>Console with styled components</Title>
+            <Title color='green'>Console imitation with styled components</Title>
         </Flex>
         <Flex direction='column'>
-            <Console color='green'/>
-            <Button outlined color='green' align='flex-end'>Send</Button>
+            <Console color='green' lines={lines} onKeyPressHandler={onKeyPressHandler}/>
+            <Button outlined color='green' align='flex-end'>
+                Send
+            </Button>
         </Flex>
     </AppWrapper>
 };
