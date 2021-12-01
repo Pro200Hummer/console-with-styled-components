@@ -23,11 +23,11 @@ export const App = () => {
 
     return <AppWrapper>
         <Flex justify='center'>
-            <Title color='green'>Console imitation with styled components</Title>
+            <Title>Console imitation with styled components</Title>
         </Flex>
         <Flex direction='column'>
-            <Console color='green' lines={lines} onKeyPressHandler={onKeyPressHandler}/>
-            <Button outlined color='green' align='flex-end'>
+            <Console lines={lines} onKeyPressHandler={onKeyPressHandler}/>
+            <Button outlined align='flex-end'>
                 Send
             </Button>
         </Flex>

@@ -19,12 +19,12 @@ const StyledButton = styled.button<ButtonProps>`
   align-self: ${props => props.align || 'stretch'};
 
   ${props => props.primary && css<ButtonProps>`
-    color: ${props => props.color || 'white'};
+    color: ${props => props.color || props.theme.colors.primary};
     background: ${props => props.background || 'white'};
   `}
   ${props => props.outlined && css<ButtonProps>`
-    color: ${props => props.color || 'white'};
-    border: 1px solid ${props => props.color || 'white'};
+    color: ${props => props.color || props.theme.colors.primary};
+    border: 1px solid ${props => props.color || props.theme.colors.primary};
     background: transparent;
   `}
   &:focus {

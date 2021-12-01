@@ -7,7 +7,7 @@ interface LineProps {
 
 const StyledLine = styled.div<LineProps>`
   font-size: 24px;
-  color: ${props => props.color || 'white'};
+  color: ${props => props.color || props.theme.colors.primary};
 `;
 
 const Line: FC<LineProps> = props => <StyledLine {...props}/>
